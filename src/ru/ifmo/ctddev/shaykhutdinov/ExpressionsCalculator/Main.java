@@ -9,9 +9,9 @@ public class Main {
     public static void main(String[] args) {
         try {
             ANTLRInputStream inputStream = new ANTLRInputStream(System.in);
-            ExpressionsCalculatorLexer lexer = new ExpressionsCalculatorLexer(inputStream);
+            ArithmeticExpressionsLexer lexer = new ArithmeticExpressionsLexer(inputStream);
             CommonTokenStream tokenStream = new CommonTokenStream(lexer);
-            ExpressionsCalculatorParser parser = new ExpressionsCalculatorParser(tokenStream);
+            ArithmeticExpressionsParser parser = new ArithmeticExpressionsParser(tokenStream);
 
              parser.prog();
 
