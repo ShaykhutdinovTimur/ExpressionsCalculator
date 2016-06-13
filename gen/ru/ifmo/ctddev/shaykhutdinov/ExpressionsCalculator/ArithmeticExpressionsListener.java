@@ -1,4 +1,4 @@
-// Generated from /home/timur/методы трансляции/ExpressionsCalculator/src/ru/ifmo/ctddev/shaykhutdinov/ExpressionsCalculator/ArithmeticExpressions.g4 by ANTLR 4.5.1
+// Generated from /home/timur/mt/ExpressionsCalculator/src/ru/ifmo/ctddev/shaykhutdinov/ExpressionsCalculator/ArithmeticExpressions.g4 by ANTLR 4.5.1
 package ru.ifmo.ctddev.shaykhutdinov.ExpressionsCalculator;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -89,6 +89,30 @@ public interface ArithmeticExpressionsListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitMultiplicationOrDivisionDeg(ArithmeticExpressionsParser.MultiplicationOrDivisionDegContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code FactorDeg}
+	 * labeled alternative in {@link ArithmeticExpressionsParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterFactorDeg(ArithmeticExpressionsParser.FactorDegContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code FactorDeg}
+	 * labeled alternative in {@link ArithmeticExpressionsParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitFactorDeg(ArithmeticExpressionsParser.FactorDegContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code SimpleFactor}
+	 * labeled alternative in {@link ArithmeticExpressionsParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterSimpleFactor(ArithmeticExpressionsParser.SimpleFactorContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code SimpleFactor}
+	 * labeled alternative in {@link ArithmeticExpressionsParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitSimpleFactor(ArithmeticExpressionsParser.SimpleFactorContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code Int}
 	 * labeled alternative in {@link ArithmeticExpressionsParser#deg}.

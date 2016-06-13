@@ -1,4 +1,4 @@
-// Generated from /home/timur/методы трансляции/ExpressionsCalculator/src/ru/ifmo/ctddev/shaykhutdinov/ExpressionsCalculator/ArithmeticExpressions.g4 by ANTLR 4.5.1
+// Generated from /home/timur/mt/ExpressionsCalculator/src/ru/ifmo/ctddev/shaykhutdinov/ExpressionsCalculator/ArithmeticExpressions.g4 by ANTLR 4.5.1
 package ru.ifmo.ctddev.shaykhutdinov.ExpressionsCalculator;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -58,6 +58,20 @@ public interface ArithmeticExpressionsVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitMultiplicationOrDivisionDeg(ArithmeticExpressionsParser.MultiplicationOrDivisionDegContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code FactorDeg}
+	 * labeled alternative in {@link ArithmeticExpressionsParser#factor}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFactorDeg(ArithmeticExpressionsParser.FactorDegContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code SimpleFactor}
+	 * labeled alternative in {@link ArithmeticExpressionsParser#factor}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSimpleFactor(ArithmeticExpressionsParser.SimpleFactorContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code Int}
 	 * labeled alternative in {@link ArithmeticExpressionsParser#deg}.

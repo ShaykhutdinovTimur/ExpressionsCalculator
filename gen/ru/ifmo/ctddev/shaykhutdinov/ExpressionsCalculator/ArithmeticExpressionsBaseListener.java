@@ -1,4 +1,4 @@
-// Generated from /home/timur/методы трансляции/ExpressionsCalculator/src/ru/ifmo/ctddev/shaykhutdinov/ExpressionsCalculator/ArithmeticExpressions.g4 by ANTLR 4.5.1
+// Generated from /home/timur/mt/ExpressionsCalculator/src/ru/ifmo/ctddev/shaykhutdinov/ExpressionsCalculator/ArithmeticExpressions.g4 by ANTLR 4.5.1
 package ru.ifmo.ctddev.shaykhutdinov.ExpressionsCalculator;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -95,6 +95,30 @@ public class ArithmeticExpressionsBaseListener implements ArithmeticExpressionsL
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMultiplicationOrDivisionDeg(ArithmeticExpressionsParser.MultiplicationOrDivisionDegContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFactorDeg(ArithmeticExpressionsParser.FactorDegContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFactorDeg(ArithmeticExpressionsParser.FactorDegContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSimpleFactor(ArithmeticExpressionsParser.SimpleFactorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSimpleFactor(ArithmeticExpressionsParser.SimpleFactorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

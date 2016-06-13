@@ -5,6 +5,7 @@ package ru.ifmo.ctddev.shaykhutdinov.ExpressionsCalculator;
  */
 
 import org.antlr.v4.runtime.misc.NotNull;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,7 +47,7 @@ public class EvaluativeVisitor extends ArithmeticExpressionsBaseVisitor<Integer>
     @Override
     public Integer visitMultiplicationOrDivision(@NotNull ArithmeticExpressionsParser.MultiplicationOrDivisionContext ctx) {
         int left = visit(ctx.term());
-        int right = visit(ctx.deg());
+        int right = visit(ctx.factor());
         return ctx.op.getType() == ArithmeticExpressionsParser.MUL ? left * right : left / right;
     }
 
@@ -81,7 +82,7 @@ public class EvaluativeVisitor extends ArithmeticExpressionsBaseVisitor<Integer>
      */
     @Override
     public Integer visitMultiplicationOrDivisionDeg(@NotNull ArithmeticExpressionsParser.MultiplicationOrDivisionDegContext ctx) {
-        return visit(ctx.deg());
+        return visit(ctx.factor());
     }
 
     /**
@@ -92,6 +93,24 @@ public class EvaluativeVisitor extends ArithmeticExpressionsBaseVisitor<Integer>
         int result = visit(ctx.expr());
         System.out.println(result);
         return result;
+    }
+
+    /**
+     * degree
+     */
+    @Override
+    public Integer visitFactorDeg(@NotNull ArithmeticExpressionsParser.FactorDegContext ctx) {
+        int base = visit(ctx.deg());
+        int deg = visit(ctx.factor());
+        return (int) Math.pow(base, deg);
+    }
+
+    /**
+     * simple factor
+     */
+    @Override
+    public Integer visitSimpleFactor(@NotNull ArithmeticExpressionsParser.SimpleFactorContext ctx) {
+        return visit(ctx.deg());
     }
 
 }

@@ -7,8 +7,11 @@ stat: VAR '=' expr ';' NEWLINE # Assign
 expr:  expr op=(ADD|SUB) term # AdditionOrSubtract
     | term # AdditionOrSubtractTerm;
 
-term:  term op=(MUL|DIV) deg # MultiplicationOrDivision
-    | deg # MultiplicationOrDivisionDeg;
+term:  term op=(MUL|DIV) factor # MultiplicationOrDivision
+    | factor # MultiplicationOrDivisionDeg;
+
+factor: deg EXP factor # FactorDeg
+    | deg # SimpleFactor;
 
 deg:  INT # Int
     | (SUB|)VAR # Var
@@ -23,3 +26,4 @@ MUL : '*' ;
 DIV : '/' ;
 ADD : '+' ;
 SUB : '-' ;
+EXP : '^' ;
